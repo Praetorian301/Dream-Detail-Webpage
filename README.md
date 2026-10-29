@@ -1,46 +1,209 @@
-# Dream Detail
+# 🚘 Dream Detail
 
-## 🚀 Live Site: https://dreamdetail.onrender.com
-Website for Dream Detail: mobile car detailing across Perth, plus paint correction and ceramic coatings at the Floreat workshop.
+**Professional Mobile Car Detailing | Paint Correction | Ceramic Coatings**
 
-It is a static site: plain HTML, CSS and JavaScript, with GSAP for animation. There is no framework and no server code, so it can be hosted for free as a Render static site.
+A responsive, multi-page website developed for **Dream Detail**, a professional car detailing business operating across **Perth, Western Australia**.
 
-## Pages
+The website showcases mobile detailing packages, paint correction, ceramic coatings, vehicle transformations and an interactive booking system. Paint correction and specialist services are performed at the **Floreat workshop**.
 
-| Page | What's on it |
+Built with **HTML, CSS and JavaScript**, with **GSAP animations**, the project uses a lightweight, framework-free architecture designed for fast loading, responsive layouts and straightforward maintenance.
+
+### 🌐 Live Website
+
+**[Visit Dream Detail](https://dreamdetail.onrender.com)**
+
+---
+
+## ⚙️ Technology Stack
+
+| Technology | Implementation |
 |---|---|
-| `index.html` | Intro, detailing packages, before/after slider, paint correction, ceramic coating, cars we've detailed |
-| `services.html` | Packages, paint correction with size-based pricing, ceramic coating, restoration extras |
-| `gallery.html` | Before/after slider, car galleries with lightbox, packages, reviews and Instagram |
-| `area.html` | Google map, suburb/postcode checker, how booking works |
-| `faq.html` | Frequently asked questions |
-| `book.html` | 4-step quote form with live estimate, plus the services below it |
-| `404.html` | Shown for any address that doesn't exist |
+| **HTML5** | Semantic markup and page structure |
+| **CSS3** | Responsive layouts, styling and animations |
+| **JavaScript** | Dynamic pricing, booking interactions and galleries |
+| **GSAP** | Scroll animations and visual transitions |
+| **Google Maps** | Service area mapping and suburb lookup |
+| **Python 3** | Static page generation using `src/build.py` |
+| **Render** | Static website hosting and GitHub deployments |
+| **Google Analytics 4** | Custom event tracking support |
 
-## Editing
+**Architecture:** Static website, with no frontend framework, database or server-side application.
 
-- **Words and layout:** every section lives once in `src/body.html`. After changing it, rebuild the pages with `python src/build.py`. Don't edit the generated `.html` files directly, because the next build overwrites them.
-- **Prices, phone, service area, past jobs:** the config objects at the top of `main.js` (`BUSINESS`, `PRICING`, `PROJECTS`, `CARS`, `PAINT_SHOTS`).
-- **Styles:** `styles.css`. Newer changes are appended at the end in numbered blocks.
-- **Cache busting:** after changing `styles.css` or `main.js`, bump the `?v=` numbers in `src/build.py` and rebuild, so returning visitors get the new files.
+---
 
-## Hosting on Render
+## 🌟 Features
 
-1. Push this folder to a GitHub repository. The site files (`index.html`, `render.yaml` and so on) must be at the top level of the repo.
-2. In Render, choose **New > Blueprint** and pick the repository. Render reads `render.yaml` and creates a free static site called `dream-detail`. There is no build step.
-   - Or choose **New > Static Site**, pick the repo, leave the build command empty, and set the publish directory to `.`.
-3. When it's live, copy the address (for example `https://dream-detail.onrender.com/`) into `SITE_URL` in `src/build.py`, rebuild, and push.
-4. Optional: add your own domain under the site's **Settings > Custom Domains** in Render, then put that domain in `SITE_URL` instead.
+* 📱 **Responsive Design:** Optimised layouts for desktop, tablet and mobile devices.
+* 🚗 **Service Packages:** Mobile detailing, paint correction, ceramic coatings and restoration services.
+* 💰 **Dynamic Pricing:** Vehicle size-based pricing and interactive service estimates.
+* 🖼️ **Before & After Comparisons:** Interactive sliders showcasing real vehicle transformations.
+* 📸 **Photo Galleries:** Vehicle galleries with lightbox functionality and project images.
+* 📍 **Service Area Checker:** Google Maps integration with suburb and postcode lookup.
+* 📋 **Booking System:** Four-step quote form with live pricing estimates.
+* ✨ **GSAP Animations:** Smooth transitions and scroll-based visual effects.
+* 📊 **Analytics Events:** Booking, service viewing and contact interaction tracking.
+* 🔎 **SEO Support:** Generated static pages with configurable canonical site URLs.
 
-Every push to the main branch redeploys the site automatically.
+---
 
-## Before launch
+## 📄 Website Pages
 
-1. **Quote form:** with `formEndpoint` empty in `main.js`, sending the form opens a pre-filled text message to Will on the customer's phone. Photos can't go through that way. To receive requests by email with photos, create a free form at formspree.io and paste its URL into `formEndpoint`.
-2. **Reviews:** the review cards are labelled samples. Replace them with real Google reviews.
-3. **Hours and business email:** still to be added.
-4. **Logo:** the header uses a temporary monogram.
+| Page | Description |
+|---|---|
+| 🏠 **Home** `index.html` | Business introduction, service packages, before and after comparisons, paint correction, ceramic coatings and featured vehicles |
+| 🚗 **Services** `services.html` | Detailing packages, vehicle size-based paint correction pricing, ceramic coatings and restoration extras |
+| 📸 **Gallery** `gallery.html` | Interactive before and after sliders, vehicle galleries, lightbox, customer reviews and Instagram |
+| 📍 **Service Area** `area.html` | Google Maps, suburb and postcode checker, and booking information |
+| ❓ **FAQ** `faq.html` | Frequently asked questions about detailing and services |
+| 📅 **Booking** `book.html` | Four-step quote request form with live estimates and service information |
+| 🔍 **404** `404.html` | Custom error page for invalid URLs |
 
-## Analytics
+---
 
-Add the GA4 snippet to the `<head>` in `src/build.py`. The events `start_booking`, `submit_enquiry`, `view_service`, `contact_click` and `instagram_click` already fire.
+## 🛠️ Development & Configuration
+
+The website uses a simple static build system. Page content is maintained centrally and generated into individual HTML files.
+
+### 1. Editing Website Content
+
+All website sections are maintained in:
+
+`src/body.html`
+
+After making changes, rebuild the website:
+
+```bash
+python src/build.py
+```
+
+**Important:** Do not edit the generated HTML pages directly. The next build will overwrite those changes.
+
+### 2. Business Information & Pricing
+
+Business configuration and dynamic website data are stored in `main.js`.
+
+| Configuration | Purpose |
+|---|---|
+| `BUSINESS` | Business details and contact information |
+| `PRICING` | Detailing packages and service pricing |
+| `PROJECTS` | Completed detailing projects |
+| `CARS` | Vehicle gallery information |
+| `PAINT_SHOTS` | Paint correction photography and comparisons |
+
+### 3. Styling & Animations
+
+Website styling is maintained in:
+
+`styles.css`
+
+Newer styling changes are grouped into numbered sections towards the end of the stylesheet.
+
+### 4. Cache Management
+
+After editing `styles.css` or `main.js`, update the `?v=` version numbers in `src/build.py`, then regenerate the website.
+
+This ensures returning visitors receive the latest CSS and JavaScript files.
+
+---
+
+## 🚀 Hosting & Deployment
+
+Dream Detail is deployed as a **static website on Render**, with GitHub integration for automatic deployment.
+
+### Option 1. Render Blueprint
+
+1. Push the project to a GitHub repository.
+2. Open [Render](https://render.com/) and select **New > Blueprint**.
+3. Connect the GitHub repository.
+4. Render reads `render.yaml` and configures the static website.
+5. Deploy the website.
+
+The generated HTML files, `render.yaml` and other static assets must be located at the repository's top level.
+
+### Option 2. Manual Static Site
+
+Alternatively, create a static website manually:
+
+| Setting | Value |
+|---|---|
+| **Service Type** | Static Site |
+| **Repository** | Dream Detail GitHub repository |
+| **Build Command** | Leave empty |
+| **Publish Directory** | `.` |
+| **Deployment** | Automatic on push |
+
+### Custom Domain Configuration
+
+Once deployed, update the `SITE_URL` value inside `src/build.py` to match your production domain.
+
+Then rebuild:
+
+```bash
+python src/build.py
+```
+
+Push the generated changes to GitHub.
+
+Custom domains can be configured under **Render > Settings > Custom Domains**.
+
+**Automatic Deployment:** Every push to the configured `main` branch triggers a new deployment.
+
+---
+
+## 📋 Before Launch
+
+The following items require final configuration or verification before the website is considered fully production-ready.
+
+- [ ] **Booking Form:** Configure a Formspree endpoint to receive email enquiries and photo attachments.
+- [ ] **Customer Reviews:** Replace sample review cards with genuine Google reviews.
+- [ ] **Business Hours:** Add confirmed opening hours.
+- [ ] **Business Email:** Add the official contact email.
+- [ ] **Branding:** Replace the temporary header monogram with the final logo.
+- [ ] **Analytics:** Add the Google Analytics 4 tracking configuration.
+- [ ] **Production URL:** Confirm `SITE_URL` matches the deployed website.
+
+### Booking Form Behaviour
+
+By default, the booking form uses a prefilled SMS message when `formEndpoint` is empty in `main.js`.
+
+This allows customers to send an enquiry through their phone's messaging application.
+
+**Limitation:** Photo attachments cannot be submitted through this fallback.
+
+To receive booking enquiries by email with photographs, configure a [Formspree](https://formspree.io/) endpoint in `main.js`.
+
+---
+
+## 📊 Analytics & Event Tracking
+
+The project includes support for **Google Analytics 4**.
+
+Add your GA4 tracking snippet to the HTML `<head>` generated through `src/build.py`.
+
+The following custom events are already implemented:
+
+| Event | Trigger |
+|---|---|
+| `start_booking` | Customer begins the booking process |
+| `submit_enquiry` | Customer submits an enquiry |
+| `view_service` | Customer views a service |
+| `contact_click` | Customer selects a contact option |
+| `instagram_click` | Customer opens Instagram |
+
+These events can be used to monitor website engagement, booking enquiries and customer conversion activity once GA4 is configured.
+
+---
+
+## 👨‍💻 Development & Credits
+
+**Developed for:** Dream Detail, Perth, Western Australia
+
+**Developer:** [@Praetorian301](https://github.com/Praetorian301)
+
+**Live Website:** [dreamdetail.onrender.com](https://dreamdetail.onrender.com)
+
+**Technologies:** HTML5, CSS3, JavaScript, Python, GSAP and Render.
+
+---
+
+**© Dream Detail. All rights reserved.**
