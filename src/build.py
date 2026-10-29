@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # The live address, ending in "/". Set it once the site is on Render (for
 # example "https://dream-detail.onrender.com/") or your own domain, then rebuild.
 # Left empty, the pages skip the canonical and og:url tags.
-SITE_URL = "https://dream-detail-webpage.onrender.com/"
+SITE_URL = "https://dream-detail.onrender.com/"
 
 PAGES = {
     "index.html": {
@@ -110,13 +110,14 @@ def head(file, page):
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Dream Detail: mobile car detailing and paint correction, Perth">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/brand/icon-192.png" type="image/png" sizes="192x192">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.ico?v=2" sizes="any">
+<link rel="icon" href="assets/brand/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="assets/brand/icon-192.png?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 {canonical}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-{extra}<link rel="stylesheet" href="styles.css?v=64">
+{extra}<link rel="stylesheet" href="styles.css?v=65">
 <script type="application/ld+json">
 {JSON_LD}
 </script>
@@ -129,7 +130,7 @@ def scripts(page):
             '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>']
     if page.get("map"):
         tags.append('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>')
-    tags.append('<script src="main.js?v=52"></script>')
+    tags.append('<script src="main.js?v=53"></script>')
     return "\n".join(tags)
 
 

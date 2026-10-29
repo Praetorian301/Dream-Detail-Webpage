@@ -1659,3 +1659,7 @@ main > section[id] { scroll-margin-top: 80px; }
   #book .form-reset { margin-right: 0; justify-content: center; padding: 0 12px; white-space: nowrap; font-size: 1.05rem; }
 }
 @media (max-width: 400px) { #book .form-reset svg { display: none; } }
+
+/* v50: before photos show true colour (no grey filter) */
+.ph--before { filter: none; }
+.ph--before .ph__art svg { opacity: 1; }
