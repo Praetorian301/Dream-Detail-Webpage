@@ -1,0 +1,19 @@
+# Render Blueprint: a free static site, no build step.
+# On Render: New > Blueprint, pick this GitHub repo, and Render reads this file.
+services:
+  - type: web
+    name: dream-detail
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800

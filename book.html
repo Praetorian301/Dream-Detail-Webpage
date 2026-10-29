@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en-AU" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request a Detail | Get a Quote | Dream Detail Perth</title>
+<meta name="description" content="Tell us about the car and when suits you. We'll reply with a price and a confirmed time. Nothing is charged online.">
+<meta name="theme-color" content="#09090d">
+<meta property="og:title" content="Request a Detail | Get a Quote | Dream Detail Perth">
+<meta property="og:description" content="Tell us about the car and when suits you. We'll reply with a price and a confirmed time. Nothing is charged online.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css?v=63">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoWash","name":"Dream Detail","description":"Mobile car detailing, paint enhancement and ceramic coating.","areaServed":"Perth, WA","telephone":"+61424184697","address":{"@type":"PostalAddress","addressLocality":"Floreat","addressRegion":"WA","addressCountry":"AU"},"priceRange":"$$","sameAs":["https://www.instagram.com/dreamdetail.au/"],"openingHours":["Mo-Fr 07:00-17:00","Sa 08:00-15:00"]}
+</script>
+</head>
+<body data-page="book">
+<!-- ======================================================================
+     Dream Detail — page body
+     Shared by index.html (standalone site) and the hosted preview.
+     Every image points at assets/ig/<file>. Drop the matching Instagram
+     photo into that folder and it replaces the drawn placeholder.
+     ====================================================================== -->
+
+<!-- SVG sprite: icons + the car outline reused in hero and placeholders -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="car" viewBox="0 0 1200 400">
+      <!-- body -->
+      <path d="M70 305 L70 276 Q74 252 132 243 L338 218 Q420 152 560 129 Q700 110 832 150 Q884 168 934 201 L1052 217 Q1134 229 1140 280 L1140 305 L1044 305 A 89 89 0 0 0 866 305 L 404 305 A 89 89 0 0 0 226 305 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+      <!-- glasshouse -->
+      <path d="M382 216 Q452 164 560 147 Q676 132 786 160 L846 206 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M600 143 L612 210" stroke="currentColor" stroke-width="1.4"/>
+      <!-- shoulder crease + door cut -->
+      <path d="M150 256 Q520 232 1100 244" fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/>
+      <path d="M612 212 L620 300" stroke="currentColor" stroke-width="1" opacity=".6"/>
+      <!-- lamps -->
+      <path d="M1084 228 L1132 246" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <path d="M78 262 L118 254" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+      <!-- wheels -->
+      <circle cx="315" cy="305" r="72" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <circle cx="315" cy="305" r="44" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="955" cy="305" r="72" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <circle cx="955" cy="305" r="44" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <g stroke="currentColor" stroke-width="1" opacity=".7">
+        <path d="M315 261 V349 M271 305 H359 M284 274 L346 336 M346 274 L284 336"/>
+        <path d="M955 261 V349 M911 305 H999 M924 274 L986 336 M986 274 L924 336"/>
+      </g>
+    </symbol>
+    <symbol id="seat" viewBox="0 0 400 400">
+      <path d="M150 60 Q150 40 172 40 L232 40 Q254 40 254 62 L250 200 Q250 214 264 220 L300 236 Q318 246 316 268 L310 320 Q308 340 288 340 L140 340 Q118 340 118 318 L120 230 Q122 210 140 206 L148 204 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M160 100 H244 M158 150 H246 M140 270 H300" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></symbol>
+    <symbol id="i-drag" viewBox="0 0 24 24"><path d="m9 6-6 6 6 6m6-12 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-reel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 8.5h18M8 3l3 5.5M14 3l3 5.5" stroke="currentColor" stroke-width="1.5"/><path d="m10 12 5 3-5 3z" fill="currentColor"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path d="M21 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.1a4.4 4.4 0 0 1-1.9 2.9v2.4h3A9 9 0 0 0 21 12.2z M12 21c2.5 0 4.7-.8 6.2-2.3l-3-2.4c-.8.6-1.9.9-3.2.9-2.4 0-4.5-1.6-5.2-3.9H3.7v2.5A9 9 0 0 0 12 21z M6.8 13.3a5.4 5.4 0 0 1 0-3.5V7.3H3.7a9 9 0 0 0 0 8.1z M12 6.6c1.4 0 2.6.5 3.6 1.4l2.7-2.7A9 9 0 0 0 3.7 7.3l3.1 2.5C7.5 8.2 9.6 6.6 12 6.6z" fill="currentColor"/></symbol>
+    <linearGradient id="sweep" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#b99a67" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff6e3" stop-opacity="1"/>
+      <stop offset="1" stop-color="#b99a67" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<a class="sr-only" href="#main">Skip to content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Dream Detail home">
+      <!-- Temporary monogram. Replace with the supplied logo file (assets/logo.svg). -->
+      <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x=".75" y=".75" width="38.5" height="38.5" rx="3" fill="none" stroke="#b99a67" stroke-width="1.5"/>
+        <path d="M9 11h7.5a9 9 0 0 1 0 18H9z" fill="none" class="logo__d" fill="none" stroke-width="2"/>
+        <path d="M19 11h7.5a9 9 0 0 1 0 18H19z" fill="none" stroke="#b99a67" stroke-width="2"/>
+      </svg>
+      <span class="logo__word">Dream <span>Detail</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="gallery.html">Our Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="area.html">Locations</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="nav__book" href="book.html#book" data-track="start_booking">Book Now</a></li>
+      </ul>
+    </nav>
+
+    <button class="theme-toggle" type="button" aria-label="Switch to day mode" title="Day / night mode">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+    </button>
+
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" hidden>
+    <ul>
+      <li><a href="index.html">Home <svg width="20" height="20"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="gallery.html">Our work &amp; gallery <svg width="20" height="20"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="services.html">Services &amp; pricing <svg width="20" height="20"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="area.html">Locations <svg width="20" height="20"><use href="#i-arrow"/></svg></a></li>
+      <li><a href="faq.html">FAQ <svg width="20" height="20"><use href="#i-arrow"/></svg></a></li>
+    </ul>
+    <a class="btn btn--primary" href="book.html#book" data-track="start_booking">Book a Detail</a>
+  </nav>
+</header>
+
+<main id="main">
+
+
+<h1 class="sr-only">Request a car detail or quote from Dream Detail</h1>
+<!-- ================= 8. BOOKING / ENQUIRY FORM ================= -->
+<section class="band band--dark" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div class="section-head book-head">
+      <span class="eyebrow">Quotes &amp; bookings</span>
+      <div class="book-head__row">
+        <h2 id="book-title">Request your detail</h2>
+        <div class="book-head__more">
+          <span>Not sure what you need?<br>See what's included and prices.</span>
+          <a class="btn btn--primary book-head__services" href="#services">Our services <svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <p>Tell us about the car and when suits you. We'll reply with a price and a confirmed time. Nothing is charged online.</p>
+    </div>
+
+    <div class="book">
+      <div class="form-card">
+        <ol class="stepper" id="stepper" aria-label="Booking progress">
+          <li class="is-current"><span>Service</span></li>
+          <li><span>Vehicle</span></li>
+          <li><span>When &amp; where</span></li>
+          <li><span>Contact</span></li>
+        </ol>
+
+        <form id="booking-form" novalidate>
+          <!-- STEP 1: Service -->
+          <fieldset class="fstep" data-step="1">
+            <legend>Choose a service</legend>
+            <div class="field">
+              <span class="label" id="pkg-label">Mobile detailing</span>
+              <div class="choices choices--3" role="radiogroup" aria-labelledby="pkg-label">
+                <label class="choice"><input type="radio" name="package" value="complete" checked><span><b>Complete Detail</b><small>inside + out from $200</small></span></label>
+                <label class="choice"><input type="radio" name="package" value="interior"><span><b>Interior Detail</b><small>from $100</small></span></label>
+                <label class="choice"><input type="radio" name="package" value="exterior"><span><b>Exterior Detail</b><small>from $100</small></span></label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="pkg-label-2">Paint correction · Floreat workshop</span>
+              <div class="choices choices--4" role="radiogroup" aria-labelledby="pkg-label-2">
+                <label class="choice"><input type="radio" name="package" value="single"><span><b>Single Stage</b><small data-choice-price="single">from $450</small></span></label>
+                <label class="choice"><input type="radio" name="package" value="two"><span><b>Two Stage</b><small data-choice-price="two">from $600</small></span></label>
+                <label class="choice"><input type="radio" name="package" value="three"><span><b>Three Stage</b><small data-choice-price="three">from $800</small></span></label>
+                <label class="choice"><input type="radio" name="package" value="restoration"><span><b>Restoration</b><small>quote</small></span></label>
+              </div>
+              <span class="err" data-err="package"></span>
+            </div>
+            <div class="field">
+              <span class="label">Add-ons <span class="hint">(optional)</span></span>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="extras" value="taillights"><span>Taillights <em>$20 each</em></span></label>
+                <label class="chip"><input type="checkbox" name="extras" value="headlights"><span>Headlights <em>$40 each</em></span></label>
+                <label class="chip"><input type="checkbox" name="extras" value="leather"><span>Leather care <em>$50 · 7 seats $70</em></span></label>
+                <label class="chip"><input type="checkbox" name="extras" value="trim"><span>Plastic trim <em>$50</em></span></label>
+                <label class="chip"><input type="checkbox" name="extras" value="ceramic"><span>Ceramic coating <em>quoted by size</em></span></label>
+              </div>
+              <span class="hint" id="extras-hint"></span>
+            </div>
+          </fieldset>
+
+          <!-- STEP 2: Vehicle -->
+          <fieldset class="fstep" data-step="2" hidden>
+            <legend>Your vehicle</legend>
+            <div class="row row--2">
+              <div class="field">
+                <label for="make">Make</label>
+                <input class="input" id="make" name="make" placeholder="e.g. Subaru" autocomplete="off" required>
+                <span class="err" data-err="make"></span>
+              </div>
+              <div class="field">
+                <label for="model">Model &amp; year</label>
+                <input class="input" id="model" name="model" placeholder="e.g. XV 2019" autocomplete="off" required>
+                <span class="err" data-err="model"></span>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="body-label">Vehicle size</span>
+              <div class="choices choices--4" role="radiogroup" aria-labelledby="body-label">
+                <label class="choice"><input type="radio" name="size" value="hatch"><span><b>Hatch / Coupe</b><small>small</small></span></label>
+                <label class="choice"><input type="radio" name="size" value="sedan" checked><span><b>Sedan / Wagon</b><small>medium</small></span></label>
+                <label class="choice"><input type="radio" name="size" value="suv"><span><b>Medium SUV</b><small>crossover</small></span></label>
+                <label class="choice"><input type="radio" name="size" value="ute"><span><b>Large SUV / 4WD</b><small>7-seaters, 4WDs</small></span></label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Anything that needs attention? <span class="hint">(tick any)</span></span>
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="condition" value="swirls"><span>Swirls / scratches</span></label>
+                <label class="chip"><input type="checkbox" name="condition" value="faded"><span>Faded / oxidised paint</span></label>
+                <label class="chip"><input type="checkbox" name="condition" value="stains"><span>Interior stains</span></label>
+                <label class="chip"><input type="checkbox" name="condition" value="pet"><span>Pet hair</span></label>
+                <label class="chip"><input type="checkbox" name="condition" value="leather"><span>Worn leather</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Seats</span>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="seats" value="5" checked><span>5 seats</span></label>
+                <label class="chip"><input type="radio" name="seats" value="7"><span>7 seats</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label">Photos <span class="hint">(recommended: we quote from these)</span></span>
+              <label class="dropzone" id="dropzone">
+                <svg><use href="#i-upload"/></svg>
+                <span><b style="color:var(--paper)">Add photos</b> or drag them here</span>
+                <span class="hint">Up to 6 images, 10 MB each</span>
+                <input type="file" id="photos" name="photos" accept="image/*" multiple>
+              </label>
+              <div class="previews" id="previews"></div>
+            </div>
+          </fieldset>
+
+          <!-- STEP 3: When & where -->
+          <fieldset class="fstep" data-step="3" hidden>
+            <legend>When &amp; where</legend>
+            <div class="field">
+              <label for="location">Where should the work happen?</label>
+              <select class="input" id="location" name="location">
+                <option value="mobile">At my place (mobile)</option>
+                <option value="dropoff">I'll drop it at the Floreat workshop</option>
+                <option value="pickup">Pick up and return my car (free)</option>
+              </select>
+              <span class="hint" id="location-hint"></span>
+            </div>
+            <div class="row row--2">
+              <div class="field">
+                <label for="date">Preferred date</label>
+                <input class="input" type="date" id="date" name="date" required>
+                <span class="err" data-err="date"></span>
+              </div>
+              <div class="field">
+                <label for="window">Time window</label>
+                <select class="input" id="window" name="window">
+                  <option value="morning">Morning (7–11am)</option>
+                  <option value="midday">Midday (11am–2pm)</option>
+                  <option value="afternoon">Afternoon (2–5pm)</option>
+                  <option value="any">Any time</option>
+                </select>
+              </div>
+            </div>
+            <div class="row row--2">
+              <div class="field">
+                <label for="suburb">Suburb</label>
+                <input class="input" id="suburb" name="suburb" placeholder="e.g. Scarborough" autocomplete="address-level2" required>
+                <span class="err" data-err="suburb"></span>
+              </div>
+              <div class="field">
+                <label for="bpostcode">Postcode</label>
+                <input class="input" id="bpostcode" name="postcode" inputmode="numeric" maxlength="4" placeholder="6019" autocomplete="postal-code" required>
+                <span class="err" data-err="postcode"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="address">Street address <span class="hint">(where the car will be)</span></label>
+              <input class="input" id="address" name="address" placeholder="Street number and name" autocomplete="street-address">
+              <span class="err" data-err="address"></span>
+            </div>
+          </fieldset>
+
+          <!-- STEP 4: Contact + review -->
+          <fieldset class="fstep" data-step="4" hidden>
+            <legend>Your details</legend>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input class="input" id="name" name="name" autocomplete="name" required>
+              <span class="err" data-err="name"></span>
+            </div>
+            <div class="row row--2">
+              <div class="field">
+                <label for="mobile">Mobile</label>
+                <input class="input" id="mobile" name="mobile" type="tel" inputmode="tel" placeholder="04xx xxx xxx" autocomplete="tel" required>
+                <span class="err" data-err="mobile"></span>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="hint">(optional)</span></label>
+                <input class="input" id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email">
+                <span class="err" data-err="email"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="notes">Anything we should know?</label>
+              <textarea class="input" id="notes" name="notes" placeholder="Where the keys will be, parking access, specific marks…"></textarea>
+            </div>
+            <div class="field">
+              <span class="label">Review</span>
+              <dl class="review-list" id="review-list"></dl>
+            </div>
+            <label class="consent"><input type="checkbox" id="consent" name="consent" required><span>I understand this is a request, not a confirmed booking. Dream Detail will contact me to confirm the time and final price.</span></label>
+            <span class="err" data-err="consent"></span>
+            <!-- Honeypot: bots fill this, people never see it -->
+            <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          </fieldset>
+
+          <div class="form-nav" id="form-nav">
+            <button type="button" class="btn btn--ghost" id="prev-btn" hidden>Back</button>
+            <button type="button" class="form-reset" id="reset-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+              Reset form
+            </button>
+            <button type="button" class="btn btn--primary" id="next-btn">Continue <svg><use href="#i-arrow"/></svg></button>
+            <button type="submit" class="btn btn--primary" id="submit-btn" hidden>Send request <svg><use href="#i-arrow"/></svg></button>
+          </div>
+        </form>
+
+        <div class="success" id="success" hidden tabindex="-1">
+          <div class="success__icon"><svg><use href="#i-check"/></svg></div>
+          <h3>Request received</h3>
+          <p>Thanks, <span id="success-name">there</span>. Your reference is <code id="success-ref">DD-0000</code>. <span id="success-note">Will usually replies the same day with a price and a time.</span></p>
+          <button type="button" class="btn btn--ghost" id="new-request">Make another request</button>
+        </div>
+      </div>
+
+      <aside class="estimate" aria-label="Estimate">
+        <div class="estimate__card">
+          <span class="eyebrow">Your estimate</span>
+          <div class="estimate__price" id="est-total" aria-live="polite">$200 <small>starting price</small></div>
+          <ul class="estimate__lines" id="est-lines"></ul>
+          <p class="estimate__fine" id="est-fine">Rough estimate only. The final price is confirmed once we've seen the car.</p>
+        </div>
+        <div class="estimate__contact">
+          <span class="eyebrow">Rather talk?</span>
+          <a href="sms:+61424184697" data-track="contact_click" data-contact="phone"><svg><use href="#i-phone"/></svg><span>Text Will: <span data-phone>0424 184 697</span></span></a>
+          <a href="https://www.instagram.com/dreamdetail.au/" target="_blank" rel="noopener" data-track="instagram_click"><svg><use href="#i-ig"/></svg><span>DM us @dreamdetail.au</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DETAILING PACKAGES ================= -->
+<section class="band band--light" id="services" aria-label="Services and pricing">
+  <div class="wrap">
+    <!-- ---------- Mobile services ---------- -->
+    <div class="svc-group-head">
+      <div>
+        <span class="eyebrow">Mobile · we come to you</span>
+        <h3>Detailing packages</h3>
+      </div>
+    </div>
+
+    <div class="packages">
+      <article class="pkg pkg--feature" data-anim="rise" data-pkg="complete">
+        <div class="pkg__img"><img src="assets/img/svc/complete.jpg" alt="White VW Passat Alltrack after a Complete Detail" loading="lazy"></div>
+        <div class="pkg__top"><span class="pkg__stage">Mobile</span><span class="pkg__badge">Most booked</span></div>
+        <h3>Complete Detail</h3>
+        <p class="pkg__note">Inside, outside and wheels: a full refresh for the whole car.</p>
+        <div>
+          <div class="pkg__price"><small>From</small><b>$200</b></div>
+          <span class="pkg__time">Priced on size and condition</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Pre-rinse and snow foam soak</li>
+          <li><svg><use href="#i-check"/></svg>Hand wash with pH-neutral soap, hand-dried</li>
+          <li><svg><use href="#i-check"/></svg>Wheels, rims and tyres cleaned, tyres dressed</li>
+          <li><svg><use href="#i-check"/></svg>Door jambs washed</li>
+          <li><svg><use href="#i-check"/></svg>Full vacuum: seats, carpets and boot</li>
+          <li><svg><use href="#i-check"/></svg>Dash, console, trims and door cards cleaned and dressed</li>
+          <li><svg><use href="#i-check"/></svg>Glass streak-free inside and out</li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="book.html" data-book="complete">Book Complete Detail</a>
+      </article>
+
+      <article class="pkg" data-anim="rise" data-pkg="interior">
+        <div class="pkg__img"><img src="assets/img/cars/prado/07.jpg" alt="Spotless Toyota Prado dash, console and leather front seats after an interior detail" loading="lazy"></div>
+        <div class="pkg__top"><span class="pkg__stage">Mobile</span></div>
+        <h3>Interior Detail</h3>
+        <p class="pkg__note">Just the inside, or add it to any paint correction job.</p>
+        <div>
+          <div class="pkg__price"><small>From</small><b>$100</b></div>
+          <span class="pkg__time">Priced on size and condition</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Full vacuum, including the boot</li>
+          <li><svg><use href="#i-check"/></svg>Dash, console and plastics cleaned</li>
+          <li><svg><use href="#i-check"/></svg>Interior plastics lightly dressed</li>
+          <li><svg><use href="#i-check"/></svg>Door cards and interior glass</li>
+          <li><svg><use href="#i-check"/></svg>Light marks removed where possible</li>
+        </ul>
+        <a class="btn btn--outline-dark btn--block" href="book.html" data-book="interior">Book Interior Detail</a>
+      </article>
+
+      <article class="pkg" data-anim="rise" data-pkg="leather">
+        <div class="pkg__img"><img src="assets/img/svc/leather.jpg" alt="Conditioned black leather seats in a VW Passat" loading="lazy"></div>
+        <div class="pkg__top"><span class="pkg__stage">Mobile · add-on</span></div>
+        <h3>Leather Care</h3>
+        <p class="pkg__note">Cleans, conditions and protects your leather to help prevent cracking, fading and wear.</p>
+        <div>
+          <div class="pkg__price"><b>$50</b><small>5 seats</small></div>
+          <span class="pkg__time">$70 for 7 seats · on its own or with any detail</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Seats and floors vacuumed</li>
+          <li><svg><use href="#i-check"/></svg>Deep clean with a leather brush</li>
+          <li><svg><use href="#i-check"/></svg>Conditioner worked into the leather</li>
+          <li><svg><use href="#i-check"/></svg>Protective coating applied</li>
+        </ul>
+        <a class="btn btn--outline-dark btn--block" href="book.html" data-book="leather">Book Leather Care</a>
+      </article>
+
+      <article class="pkg" data-anim="rise" data-pkg="headlights">
+        <div class="pkg__img"><img src="assets/ig/headlight-after.jpg" alt="Restored, crystal-clear headlight on a Lexus IS200" loading="lazy"></div>
+        <div class="pkg__top"><span class="pkg__stage">Mobile</span><span class="pkg__badge">1-yr warranty</span></div>
+        <h3>Headlight Restoration</h3>
+        <p class="pkg__note">Yellowed, hazy lenses brought back to clear.</p>
+        <div>
+          <div class="pkg__price"><b>$40</b><small>per light</small></div>
+          <span class="pkg__time">Taillights quoted by condition</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Oxidation and haze removed</li>
+          <li><svg><use href="#i-check"/></svg>Lens polished back to clear</li>
+          <li><svg><use href="#i-check"/></svg>Sealed to slow re-yellowing</li>
+          <li><svg><use href="#i-check"/></svg>1-year warranty</li>
+        </ul>
+        <a class="btn btn--outline-dark btn--block" href="book.html" data-book="headlights">Book Headlights</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAINT CORRECTION ================= -->
+<section class="band band--light band--grey" id="paint-correction" aria-label="Paint correction">
+  <div class="wrap">
+    <!-- ---------- Workshop services ---------- -->
+    <div class="svc-group-head">
+      <div>
+        <span class="eyebrow">Workshop · Floreat</span>
+        <h3>Paint correction</h3>
+      </div>
+      <p>Every job begins with a thorough wash and clay bar decontamination, followed by careful masking of all rubber and plastic trim before polishing begins. Most vehicles spend approximately two days at our workshop. You're welcome to drop your car off, or we can collect and return it free of charge.</p>
+    </div>
+
+    <!-- What paint correction does: real Dream Detail jobs, before and after. Pick a job below the photos. -->
+    <figure class="pc-photo" id="pc-photo" data-anim="rise">
+      <div class="pc-photo__img"><img id="pc-before" src="assets/img/ba/paint-front-before.jpg" alt="Before: scuffs and scratches on a black bumper" loading="lazy"><span>Before</span></div>
+      <div class="pc-photo__img"><img id="pc-after" src="assets/img/ba/paint-front-after.jpg" alt="After: the same bumper machine polished to a clean gloss" loading="lazy"><span>After</span></div>
+      <figcaption id="pc-caption">Machine polishing takes out swirls, scratches and scuffs, leaving a deep, mirror-like gloss.</figcaption>
+    </figure>
+    <p class="pc-tabs__hint"><svg><use href="#i-arrow"/></svg>Tap a job to see its before and after</p>
+    <div class="pc-tabs" id="pc-tabs" role="group" aria-label="Choose a paint correction job"></div>
+
+    <div class="packages__controls">
+      <div class="size-switch" role="group" aria-label="Vehicle size">
+        <button type="button" data-size="hatch" aria-pressed="false">Hatch / Coupe</button>
+        <button type="button" data-size="sedan" aria-pressed="true">Sedan / Wagon</button>
+        <button type="button" data-size="suv" aria-pressed="false">Medium SUV</button>
+        <button type="button" data-size="ute" aria-pressed="false">Large SUV / 4WD</button>
+      </div>
+      <p class="size-hint"><svg><use href="#i-arrow"/></svg><span><b>Pick your vehicle size</b><small>Prices update to match (AUD, rough guide)</small></span></p>
+    </div>
+
+    <div class="packages packages--3">
+      <article class="pkg" data-anim="rise" data-pkg="single">
+        <div class="pkg__top"><span class="pkg__stage">Stage 01 · Enhance</span></div>
+        <h3>Single Stage Enhancement</h3>
+        <p class="pkg__note">A single machine polish that lifts gloss and softens light defects. Best for paint that's already in good condition.</p>
+        <div>
+          <div class="pkg__price"><small>From</small><b data-price>$450</b></div>
+          <span class="pkg__time">≈ 2 days · Floreat</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Full wash and clay-bar decontamination</li>
+          <li><svg><use href="#i-check"/></svg>Rubber and plastic trim taped</li>
+          <li><svg><use href="#i-check"/></svg>Single-stage machine polish</li>
+          <li><svg><use href="#i-check"/></svg>Protective sealant layer applied to paint</li>
+        </ul>
+        <a class="btn btn--outline-dark btn--block" href="book.html" data-book="single">Get a Quote</a>
+      </article>
+
+      <article class="pkg pkg--feature" data-anim="rise" data-pkg="two">
+        <div class="pkg__top"><span class="pkg__stage">Stage 02 · Correct</span><span class="pkg__badge">Recommended</span></div>
+        <h3>Two Stage Correction</h3>
+        <p class="pkg__note">A cutting stage followed by a finishing polish. Removes most swirls and light scratches and restores real depth. The right choice for most cars.</p>
+        <div>
+          <div class="pkg__price"><small>From</small><b data-price>$600</b></div>
+          <span class="pkg__time">≈ 2 days · Floreat</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Full wash and clay-bar decontamination</li>
+          <li><svg><use href="#i-check"/></svg>Rubber and plastic trim taped</li>
+          <li><svg><use href="#i-check"/></svg>Compound cut to remove defects</li>
+          <li><svg><use href="#i-check"/></svg>Finishing polish for clarity and gloss</li>
+          <li><svg><use href="#i-check"/></svg>Protective sealant layer applied to paint</li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="book.html" data-book="two">Get a Quote</a>
+      </article>
+
+      <article class="pkg" data-anim="rise" data-pkg="three">
+        <div class="pkg__top"><span class="pkg__stage">Stage 03 · Perfect</span></div>
+        <h3>Three Stage Correction</h3>
+        <p class="pkg__note">An extra refining stage for dark or heavily marked paint, aiming for a near-showroom finish.</p>
+        <div>
+          <div class="pkg__price"><small>From</small><b data-price>$800</b></div>
+          <span class="pkg__time">≈ 2–3 days · Floreat</span>
+        </div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Everything in Two Stage</li>
+          <li><svg><use href="#i-check"/></svg>Additional refining stage</li>
+          <li><svg><use href="#i-check"/></svg>The highest finish we can achieve</li>
+          <li><svg><use href="#i-check"/></svg>Ideal for black and dark colours</li>
+        </ul>
+        <a class="btn btn--outline-dark btn--block" href="book.html" data-book="three">Get a Quote</a>
+      </article>
+    </div>
+
+    <!-- Indicative pricing table, straight from Dream Detail's price list -->
+    <div class="price-table" data-anim="rise">
+      <table>
+        <caption>Indicative paint correction pricing</caption>
+        <thead><tr><th scope="col">Vehicle type</th><th scope="col">Single stage</th><th scope="col">Two stage</th><th scope="col">Three stage</th></tr></thead>
+        <tbody>
+          <tr data-row="hatch"><th scope="row">Small hatchback or coupe</th><td>$400</td><td>$550</td><td>$700</td></tr>
+          <tr data-row="sedan"><th scope="row">Medium sedan or wagon</th><td>$450</td><td>$600</td><td>$800</td></tr>
+          <tr data-row="suv"><th scope="row">Medium SUV or crossover</th><td>$500</td><td>$650</td><td>$900</td></tr>
+          <tr data-row="ute"><th scope="row">Large SUV or 4WD</th><td>$550</td><td>$750</td><td>$1,000</td></tr>
+          <tr data-row="xl"><th scope="row">Oversized or specialist</th><td>Quote</td><td>Quote</td><td>Quote</td></tr>
+        </tbody>
+      </table>
+      <div class="price-table__pick" aria-live="polite">
+        <span id="pt-summary">Tap your vehicle type to see the price.</span>
+        <a class="btn btn--primary" id="pt-book" href="book.html#book" data-track="start_booking">Book this <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERAMIC COATING ================= -->
+<section class="band band--light" id="ceramic" aria-label="Ceramic coating">
+  <div class="wrap">
+    <!-- Ceramic coating callout -->
+    <div class="ceramic" data-anim="rise">
+      <img class="ceramic__bg" src="assets/img/svc/gloss.jpg" alt="" loading="lazy">
+      <div>
+        <span class="eyebrow">Premium upgrade</span>
+        <h3>Ceramic coating</h3>
+        <p>Tougher, longer-lasting protection than wax or sealant, with deeper gloss, strong water beading and easier washing. We apply it at the Floreat workshop straight after paint correction, while the paint is perfectly clean and prepared.</p>
+      </div>
+      <div class="ceramic__side">
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Added to any paint correction</li>
+          <li><svg><use href="#i-check"/></svg>Priced by vehicle size and coating</li>
+          <li><svg><use href="#i-check"/></svg>Workshop application only</li>
+        </ul>
+        <a class="btn btn--primary" href="book.html" data-book="two" data-extra="ceramic">Quote with coating <svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html"><span class="logo__word" style="color:var(--paper)">Dream <span>Detail</span></span></a>
+        <p>Professional mobile detailing, paint correction and vehicle restoration across <span data-region-label>Perth</span>. Workshop in Floreat.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/dreamdetail.au/" target="_blank" rel="noopener" aria-label="Dream Detail on Instagram" data-track="instagram_click"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://www.google.com/search?q=Dream+Detail+Perth" target="_blank" rel="noopener" aria-label="Dream Detail on Google"><svg><use href="#i-google"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#services">Complete Detail</a></li>
+          <li><a href="services.html#services">Interior &amp; leather</a></li>
+          <li><a href="services.html#services">Headlight restoration</a></li>
+          <li><a href="services.html#paint-correction">Paint correction</a></li>
+          <li><a href="services.html#ceramic">Ceramic coating</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="gallery.html#work">Before &amp; after</a></li>
+          <li><a href="gallery.html#gallery">Gallery</a></li>
+          <li><a href="area.html">Locations</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="book.html#book">Get a quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="sms:+61424184697" data-track="contact_click" data-contact="phone">Text Will · <span data-phone>0424 184 697</span></a></li>
+          <li>Workshop: Floreat, WA</li>
+          <li id="footer-hours">Mon–Sat, 7am–5pm</li>
+          <li><a href="https://www.instagram.com/dreamdetail.au/" target="_blank" rel="noopener">@dreamdetail.au</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> Dream Detail, Perth WA.</span>
+      <span><a href="#top">Privacy</a> · <a href="#top">Booking terms</a> · <a href="#top">Site terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky mobile booking bar (blueprint: keep the booking action easy to find on mobile) -->
+<div class="mobile-book" id="mobile-book">
+  <a class="btn btn--ghost" href="services.html">Prices</a>
+  <a class="btn btn--primary" href="book.html#book" data-track="start_booking">Get a Quote</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js?v=49"></script>
+</body>
+</html>
