@@ -1,7 +1,9 @@
 # 🚘 Dream Detail
 
 ## 🚀 Live Site: [https://dreamdetail.onrender.com](https://dreamdetail.onrender.com)
+### 🌐 Hosted on Render:
 
+**[Visit Dream Detail](https://dreamdetail.onrender.com)** 
 
 **Professional Mobile Car Detailing | Paint Correction | Ceramic Coatings**
 
@@ -10,10 +12,6 @@ A responsive, multi-page website developed for **Dream Detail**, a professional 
 The website showcases mobile detailing packages, paint correction, ceramic coatings, vehicle transformations and an interactive booking system. Paint correction and specialist services are performed at the **Floreat workshop**.
 
 Built with **HTML, CSS and JavaScript**, with **GSAP animations**, the project uses a lightweight, framework-free architecture designed for fast loading, responsive layouts and straightforward maintenance.
-
-### 🌐 Live Website
-
-**[Visit Dream Detail](https://dreamdetail.onrender.com)** 
 
 ---
 
