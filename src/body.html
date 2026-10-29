@@ -557,7 +557,7 @@
         </div>
 
         <div class="hours">
-          <div class="hours__status"><span class="hours__dot" id="open-dot"></span><span id="open-text">Booking hours</span></div>
+          <div class="hours__status"><span class="hours__dot" id="open-dot"></span><span id="open-text">Open 7 days, Monday – Sunday</span></div>
           <table id="hours-table" aria-label="Operating hours"></table>
         </div>
 
@@ -815,7 +815,8 @@
         <div class="success" id="success" hidden tabindex="-1">
           <div class="success__icon"><svg><use href="#i-check"/></svg></div>
           <h3>Request received</h3>
-          <p>Thanks, <span id="success-name">there</span>. Your reference is <code id="success-ref">DD-0000</code>. <span id="success-note">Will usually replies the same day with a price and a time.</span></p>
+          <p class="success__ref">Your reference<code id="success-ref">DD-0000</code></p>
+          <p>Thanks, <span id="success-name">there</span>. <span id="success-note">Will usually replies the same day with a price and a time.</span></p>
           <button type="button" class="btn btn--ghost" id="new-request">Make another request</button>
         </div>
       </div>
@@ -890,7 +891,7 @@
         <ul>
           <li><a href="sms:+61424184697" data-track="contact_click" data-contact="phone">Text Will · <span data-phone>0424 184 697</span></a></li>
           <li>Workshop: Floreat, WA</li>
-          <li id="footer-hours">Mon–Sat, 7am–5pm</li>
+          <li id="footer-hours">Monday – Sunday, 7 days</li>
           <li><a href="https://www.instagram.com/dreamdetail.au/" target="_blank" rel="noopener">@dreamdetail.au</a></li>
         </ul>
       </div>

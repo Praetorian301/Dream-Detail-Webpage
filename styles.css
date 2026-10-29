@@ -1644,3 +1644,18 @@ main > section[id] { scroll-margin-top: 80px; }
 /* v48: footer text-Will link stands out */
 .footer a[data-contact="phone"] { color: var(--champagne); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
 .footer a[data-contact="phone"]:hover { color: var(--paper); }
+/* v49: iPhone tidy-ups on the booking form */
+/* iOS gives date inputs a fixed native width; make it fill the box like the other fields */
+#book input[type="date"].input { -webkit-appearance: none; appearance: none; display: block; min-width: 0; max-width: 100%; box-sizing: border-box; text-align: left; }
+#book input[type="date"].input::-webkit-date-and-time-value { text-align: left; }
+/* reference number on its own centred line, never split */
+.success__ref { display: grid; justify-items: center; gap: 6px; font-family: var(--f-mono); font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.success__ref code { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); letter-spacing: .08em; white-space: nowrap; color: var(--champagne-hi); text-transform: none; }
+/* phones: Back and Reset share a row, the main button gets its own full-width row */
+@media (max-width: 600px) {
+  #book .form-nav { flex-wrap: wrap; }
+  #book .form-nav > * { flex: 1 1 0; min-width: 0; }
+  #book .form-nav > .btn--primary { flex: 1 1 100%; order: 3; white-space: nowrap; }
+  #book .form-reset { margin-right: 0; justify-content: center; padding: 0 12px; white-space: nowrap; font-size: 1.05rem; }
+}
+@media (max-width: 400px) { #book .form-reset svg { display: none; } }

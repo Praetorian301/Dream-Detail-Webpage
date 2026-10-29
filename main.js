@@ -18,8 +18,8 @@ const BUSINESS = {
   region: "Perth",
   workshop: "Floreat",
   timeZone: "Australia/Perth",
-  // Opening hours, 24h. null = closed. Index 0 = Sunday.  CONFIRM
-  hours: [null, ["07:00", "17:00"], ["07:00", "17:00"], ["07:00", "17:00"], ["07:00", "17:00"], ["07:00", "17:00"], ["08:00", "15:00"]],
+  // Days open, index 0 = Sunday. null = closed (the date picker blocks closed days)
+  hours: [true, true, true, true, true, true, true],
   // Postcode coverage for mobile work (rough Perth metro ranges).  CONFIRM
   serviceArea: {
     standard: [[6000, 6199]],            // Perth metro
@@ -482,8 +482,7 @@ function initGallery() {
   $("#cmp-prev")?.addEventListener("click", () => stepJob(-1));
   $("#cmp-next")?.addEventListener("click", () => stepJob(1));
 
-  current = PROJECTS[Math.floor(Math.random() * PROJECTS.length)];
-  show(current);
+  show(PROJECTS[0]); // the Lexus headlights always open the slider
 
   // Autoplay: step to the next job every 5 seconds while the slider is on screen.
   // Any touch, drag, key press, thumbnail or filter click hands control to the visitor for good.
@@ -729,26 +728,10 @@ function initArea() {
   }));
   input.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); check(); } });
 
-  // Hours table + open-now, computed in the business's own time zone
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const fmt = (hm) => { const [h, m] = hm.split(":").map(Number); const ap = h >= 12 ? "pm" : "am"; return `${((h + 11) % 12) + 1}${m ? ":" + String(m).padStart(2, "0") : ""}${ap}`; };
-  const parts = Object.fromEntries(new Intl.DateTimeFormat("en-AU", { timeZone: BUSINESS.timeZone, weekday: "long", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
-    .formatToParts(new Date()).map((p) => [p.type, p.value]));
-  const today = days.indexOf(parts.weekday);
-  const nowMin = +parts.hour * 60 + +parts.minute;
-  const order = [1, 2, 3, 4, 5, 6, 0];
-  $("#hours-table").innerHTML = "<tbody>" + order.map((d) => {
-    const h = BUSINESS.hours[d];
-    return `<tr class="${d === today ? "is-today" : ""}"><td>${days[d]}</td><td>${h ? `${fmt(h[0])} – ${fmt(h[1])}` : "Closed"}</td></tr>`;
-  }).join("") + "</tbody>";
-
-  const h = BUSINESS.hours[today];
-  const toMin = (hm) => { const [a, b] = hm.split(":").map(Number); return a * 60 + b; };
-  const open = h && nowMin >= toMin(h[0]) && nowMin < toMin(h[1]);
-  $("#open-dot").classList.toggle("is-open", !!open);
-  $("#open-text").textContent = open
-    ? `Open now, until ${fmt(h[1])} (${BUSINESS.region} time)`
-    : `Closed now. Requests are answered from the next opening (${BUSINESS.region} time)`;
+  // Open every day, no set hours shown
+  $("#hours-table").remove();
+  $("#open-dot").classList.add("is-open");
+  $("#open-text").textContent = "Open 7 days, Monday – Sunday";
 }
 
 /* --------------------------------------------------------------------------
@@ -938,11 +921,17 @@ function initBooking() {
   f.addEventListener("change", updateEstimate);
   $("#location").addEventListener("change", (e) => (e.target.dataset.touched = "1"));
 
-  $("#next-btn").addEventListener("click", () => {
-    if (validate(step)) goStep(step + 1);
-    $("#book").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-  });
-  $("#prev-btn").addEventListener("click", () => goStep(step - 1));
+  // After a step change, bring the quote box into view: centred if it fits on screen, otherwise its top just under the menu bar
+  const toCard = () => {
+    const card = $(".form-card");
+    const r = card.getBoundingClientRect();
+    const head = $(".site-header")?.offsetHeight || 0;
+    const room = innerHeight - head;
+    const top = scrollY + r.top - head - (r.height < room ? (room - r.height) / 2 : 12);
+    window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "auto" : "smooth" });
+  };
+  $("#next-btn").addEventListener("click", () => { if (validate(step)) { goStep(step + 1); toCard(); } });
+  $("#prev-btn").addEventListener("click", () => { goStep(step - 1); toCard(); });
 
   // Photo upload with previews (max 6, 10 MB each)
   const input = $("#photos"), drop = $("#dropzone"), prev = $("#previews");
@@ -1026,7 +1015,7 @@ function initBooking() {
   $("#reset-btn").addEventListener("click", () => {
     resetForm();
     toast("Form cleared.");
-    $("#book").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    toCard();
   });
 
   goStep(1);

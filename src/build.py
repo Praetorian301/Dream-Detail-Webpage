@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # The live address, ending in "/". Set it once the site is on Render (for
 # example "https://dream-detail.onrender.com/") or your own domain, then rebuild.
 # Left empty, the pages skip the canonical and og:url tags.
-SITE_URL = ""
+SITE_URL = "https://dream-detail-webpage.onrender.com/"
 
 PAGES = {
     "index.html": {
@@ -104,10 +104,19 @@ def head(file, page):
 <meta property="og:title" content="{page["title"]}">
 <meta property="og:description" content="{page["description"]}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Dream Detail">
+<meta property="og:image" content="{SITE_URL or ""}assets/brand/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dream Detail: mobile car detailing and paint correction, Perth">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/brand/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 {canonical}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-{extra}<link rel="stylesheet" href="styles.css?v=63">
+{extra}<link rel="stylesheet" href="styles.css?v=64">
 <script type="application/ld+json">
 {JSON_LD}
 </script>
@@ -120,7 +129,7 @@ def scripts(page):
             '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>']
     if page.get("map"):
         tags.append('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>')
-    tags.append('<script src="main.js?v=49"></script>')
+    tags.append('<script src="main.js?v=52"></script>')
     return "\n".join(tags)
 
 
