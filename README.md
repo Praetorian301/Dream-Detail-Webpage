@@ -13,7 +13,7 @@ Built with **HTML, CSS and JavaScript**, with **GSAP animations**, the project u
 
 ### 🌐 Live Website
 
-**[Visit Dream Detail](https://dreamdetail.onrender.com)** [Visit Dream Detail](https://dreamdetail.onrender.com)**
+**[Visit Dream Detail](https://dreamdetail.onrender.com)** 
 
 ---
 
