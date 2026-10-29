@@ -1663,3 +1663,5 @@ main > section[id] { scroll-margin-top: 80px; }
 /* v50: before photos show true colour (no grey filter) */
 .ph--before { filter: none; }
 .ph--before .ph__art svg { opacity: 1; }
+/* keep each slider photo in its own layer so the after image stays on top */
+.compare__img { isolation: isolate; }
